@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="NCTCUI.admin1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <title></title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/w3.css" />
+  <%--  <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+
+        <style type="text/css">
+            .auto-style1 {
+                width: 47px;
+                height: 51px;
+            }1`
+            .auto-style3 {
+                width: 221px;
+                height: 77px;
+                text-align: center;
+            }
+            .auto-style4 {
+                float: left;
+                width: 82%;
+                height: 68px;
+            }
+            .auto-style5 {
+                float: left;
+                width: 280px;
+                height: 96px;
+            }
+        </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+
+            <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header" style="height:91px;">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="admindash.aspx">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="admindsr.aspx">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                        DSR
+                    </a>
+                  
+                </li>
+                <li>
+                    <%--<a href="adminleave.aspx">
+                        <i class="glyphicon glyphicon-user"></i>
+                        Attendance
+                    </a>--%>
+                    <a href="#CompanySubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                        Attendance
+                    </a>
+                    <ul class="collapse list-unstyled" id="CompanySubmenu">
+                        <li><a href="adminattendance.aspx">View Attendance</a></li>
+                        <li><a href="adminleave.aspx">Leave Requests</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="iot.aspx">
+                       <i class="glyphicon glyphicon-artificial-intelligence"></i>
+                        IOT
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="assesment.aspx">
+                        <i class="glyphicon glyphicon-pen"></i>
+                        Assesment
+                    </a>
+                </li>
+                <li>
+                    <a href="login.aspx">
+                        <i class="glyphicon glyphicon-send"></i>
+
+                        <asp:Button ID="Button1" runat="server" Text="Logout" BackColor="#282B3E" OnClick="Button1_Click" />
+
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-default" style="right: 0; top: -7px; height: 94px">
+                <div class="container-fluid">
+                    <div class="auto-style5">
+                        <div class="auto-style4">
+                            <h3 class="auto-style3">
+                                <a href="#">
+                                    <img src="images/nathcorp.png" alt="E ANGKOR YOUTUBE CHANNEL" style="padding: 0 5px 0 5px;" class="auto-style1" />NCTC PORTAL
+                                </a>
+                                <asp:Label ID="lblsession" runat="server" Text=""></asp:Label>
+                            </h3>
+                        </div>
+                        
+                        <div style="float: right; width: 15%; padding-top: 0px;">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+                   
+            </nav>
+            <div style="margin: 100px 10px 10px 20px;">
+                <div class="alert alert-primary" role="alert">
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                     
+
+            </div>
+        </div>
+    </div>
+             <!-- jQuery CDN -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+        </div>
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,381 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E9409DF-8D32-4AB8-AA0D-F8404D277452}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCTCUI</RootNamespace>
+    <AssemblyName>NCTCUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44399</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminattendance.aspx" />
+    <Content Include="admindash.aspx" />
+    <Content Include="admindsr.aspx" />
+    <Content Include="adminleave.aspx" />
+    <Content Include="assesment.aspx" />
+    <Content Include="css1\style.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap\3.3.5\css\bootstrap.min.css" />
+    <Content Include="css\bootstrap\3.3.7\css\bootstrap.min.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\w3.css" />
+    <Content Include="fonts1\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="fonts1\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="fonts1\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700.svg" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700italic.svg" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-italic.svg" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images1\signin-image.jpg" />
+    <Content Include="images1\signup-image.jpg" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\default.png" />
+    <Content Include="images\eangkor.png" />
+    <Content Include="images\img_avatar.png" />
+    <Content Include="images\nathcorp.png" />
+    <Content Include="images\ui-icons_222222_256x240.png" />
+    <Content Include="index.html" />
+    <Content Include="js1\main.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap\3.3.5\js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.12.0.min.js" />
+    <Content Include="js\jquery\jquery-1.11.3.min.js" />
+    <Content Include="Attendance.aspx" />
+    <Content Include="iot.aspx" />
+    <Content Include="leave.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="login.html" />
+    <Content Include="userviewdsr.aspx" />
+    <Content Include="vendor\jquery\jquery-ui.min.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="uploaddsr.aspx" />
+    <Content Include="dashboard.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminattendance.aspx.cs">
+      <DependentUpon>adminattendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminattendance.aspx.designer.cs">
+      <DependentUpon>adminattendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admindash.aspx.cs">
+      <DependentUpon>admindash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admindash.aspx.designer.cs">
+      <DependentUpon>admindash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admindsr.aspx.cs">
+      <DependentUpon>admindsr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admindsr.aspx.designer.cs">
+      <DependentUpon>admindsr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminleave.aspx.cs">
+      <DependentUpon>adminleave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminleave.aspx.designer.cs">
+      <DependentUpon>adminleave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="assesment.aspx.cs">
+      <DependentUpon>assesment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="assesment.aspx.designer.cs">
+      <DependentUpon>assesment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iot.aspx.cs">
+      <DependentUpon>iot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iot.aspx.designer.cs">
+      <DependentUpon>iot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leave.aspx.cs">
+      <DependentUpon>leave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leave.aspx.designer.cs">
+      <DependentUpon>leave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
+    <Compile Include="uploaddsr.aspx.cs">
+      <DependentUpon>uploaddsr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uploaddsr.aspx.designer.cs">
+      <DependentUpon>uploaddsr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userviewdsr.aspx.cs">
+      <DependentUpon>userviewdsr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userviewdsr.aspx.designer.cs">
+      <DependentUpon>userviewdsr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="css1\style.css.map" />
+    <Content Include="fonts1\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="fonts1\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="fonts1\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="fonts1\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300italic.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300italic.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300italic.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-300italic.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500italic.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500italic.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500italic.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-500italic.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-600.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-600.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-600.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-600.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700italic.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700italic.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700italic.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-700italic.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800italic.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800italic.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800italic.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-800italic.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-900.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-900.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-900.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-900.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-italic.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-italic.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-italic.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-italic.woff2" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-regular.eot" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-regular.ttf" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-regular.woff" />
+    <Content Include="fonts1\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700.eot" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700.ttf" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700.woff" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700.woff2" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700italic.eot" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700italic.ttf" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700italic.woff" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-700italic.woff2" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-italic.eot" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-italic.ttf" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-italic.woff" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-italic.woff2" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-regular.eot" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-regular.ttf" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-regular.woff" />
+    <Content Include="fonts1\poppins\roboto-condensed-v16-latin-regular.woff2" />
+    <Content Include="admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="user.Master" />
+    <Content Include="scss\common\extend.scss" />
+    <Content Include="scss\common\fonts.scss" />
+    <Content Include="scss\common\global.scss" />
+    <Content Include="scss\common\minxi.scss" />
+    <Content Include="scss\common\variables.scss" />
+    <Content Include="scss\layouts\main.scss" />
+    <Content Include="scss\layouts\responsive.scss" />
+    <Content Include="scss\style.scss" />
+    <None Include="Properties\PublishProfiles\NCTCUI - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\NCTCUI - Web Deploy1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58378</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44399/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.77.0.3865.4000\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.77.0.3865.4000\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.77.0.3865.4000\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.77.0.3865.4000\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
